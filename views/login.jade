@@ -1,0 +1,27 @@
+//extends layout
+//
+//block content
+//  .container
+//    form.form-signin(role='form', action='/login', method='post')
+//      h2.form-signin-heading Please sign in
+//      label.sr-only(for='inputEmail')
+//      input.form-control(type='text', name='username', id='inputEmail', placeholder='Username', required, autofocus)
+//      input.form-control(type='password', name='password', id='inputPassword', placeholder='Password')
+//      button.btn.btn-lg.btn-primary.btn-block(type='submit') LOGIN
+
+extends layoutreg
+
+block content
+  form(role='form', action='/login', method='post')
+    h1 Вход
+    p
+      label.uname(for='username', data-icon='u')  Ваш логин
+      input#username(name='username', required='required', type='text', placeholder='sitehere')
+    p
+      label.youpasswd(for='password', data-icon='p')  Ваш пароль
+      input#password(name='password', required='required', type='password', placeholder='например 123456')
+    p.login.button
+      input(type='submit', value='Войти')
+    p.change_link
+      | Не зарегистрированы еще ?
+      a.to_register(href='/register') Присоединяйтесь

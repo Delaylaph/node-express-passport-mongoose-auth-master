@@ -1,0 +1,100 @@
+//doctype html
+//html
+//  head
+//    title= title
+//    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+//    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css', integrity='sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp', crossorigin='anonymous')
+//    link(rel='stylesheet', href='/stylesheets/style.css')
+//  body
+//    nav.navbar.navbar-default
+//      div.container-fluid
+//        div.navbar-header
+//          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+//            span.sr-only Toggle navigation
+//            span.icon-bar
+//            span.icon-bar
+//            span.icon-bar
+//          a.navbar-brand(href='#') Node.js Auth
+//        div.collapse.navbar-collapse(id='bs-example-navbar-collapse-1')
+//          ul.nav.navbar-nav.navbar-right
+//            if (!user)
+//              li
+//                a(href='/login') Login
+//              li
+//                a(href='/register') Register
+//            if (user)
+//              li
+//                a Welcome #{user.name}
+//              li
+//                a(href='/logout') Logout
+//
+//    div.container
+//      div.content
+//        block content
+//
+//    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+
+
+doctype html
+html(lang='en')
+  head
+    title= title
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    // Fonts
+    link(href='https://fonts.googleapis.com/css?family=Lato:300,400,700', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Kaushan+Script', rel='stylesheet')
+    // Main.css
+    link(rel='stylesheet', href='/css/Main.css')
+    // scroll.css
+    link(rel='stylesheet', href='/css/scroll.css')
+    // Animate.css
+    link(rel='stylesheet', href='./css/animate.css')
+    // Bootstrap
+    link(rel='stylesheet', href='./css/bootstrap.css')
+    link(href='http://fonts.googleapis.com/css?family=PT+Sans:400,700', rel='stylesheet', type='text/css')
+
+
+  body
+    header.banner
+      .parallax
+        .parallax__layer.parallax__layer__0
+          img(src='/img/parallax/layer-01.png')
+        .parallax__layer.parallax__layer__1
+          img(src='/img/parallax/layer-02.png')
+        .parallax__layer.parallax__layer__2
+          img(src='/img/parallax/layer-03.png')
+        .parallax__layer.parallax__layer__3
+          img(src='/img/parallax/layer-04.png')
+        .parallax__layer.parallax__layer__4
+          img(src='/img/parallax/layer-05.png')
+        .parallax__layer.parallax__layer__5
+          img(src='/img/parallax/layer-06.png')
+        .parallax__layer.parallax__layer__6
+          img(src='/img/parallax/layer-07.png')
+        .parallax__cover
+      nav.container
+        h1.logo Statistic Film
+        ul.nav
+          if (user)
+            li.nav__item
+              a(href='#') Профиль
+            li.nav__item
+              a(href='/users') Статистика
+            li.nav__item
+              a Добро пожаловать #{user.name}!
+            li.nav__item
+              a(href='/logout') Выход
+          if (!user)
+            li.nav__item
+              a(href='/register') Регистрация
+            li.nav__item
+              a(href='/login') Вход
+
+          li.nav__item
+            a(href='/search') Поиск
+    div.container
+      div.content
+        block content
