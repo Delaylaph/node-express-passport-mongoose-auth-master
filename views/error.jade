@@ -8,7 +8,9 @@ html
     title OMDB
   body#error
     img(src='/img/error.png')
+    p= error
     h1= message
     h2= error.status
     pre #{error.stack}
-    button(type='submit', style='width: 180px; padding: 20px 0;', action="window.location.replace('/')") На главную
+    form(method='LINK', action='/')
+      button(type='submit', style='width: 180px; padding: 20px 0;', action="window.location.replace('/')") На главную

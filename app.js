@@ -11,7 +11,7 @@ var LocalStrategy = require('passport-local').Strategy;
 
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/node-auth')
+mongoose.connect('mongodb://heroku_sss:12345aaa@ds123534.mlab.com:23534/heroku_sss6vptz')
   .then(() =>  console.log('connection succesful'))
   .catch((err) => console.error(err));
 
@@ -19,7 +19,6 @@ mongoose.connect('mongodb://localhost/node-auth')
 var index = require('./routes/index');
 var users = require('./routes/users');
 var search = require('./routes/search');
-var movie = require('./routes/movie');
 var notFound = require('./routes/notFound');
 const render = require('./lib/render');
 http.ServerResponse.prototype.render = render;

@@ -6,16 +6,15 @@ var User = require("../models/User");
 
 var userController = {};
 
-// Restrict access to root page
+// Огранічуєм доступ до корня
 userController.home = function(req, res) {
   res.render('index', { user : req.user });
 };
 
-// Go to registration page
 userController.register = function(req, res) {
   res.render('register');
 };
-// fdfsgsd
+// поіск
 userController.search = function (req, res) {
     const parsedUrl = url.parse(req.url, true);
     const title = parsedUrl.query.title;
@@ -29,7 +28,7 @@ userController.search = function (req, res) {
 
     });
 };
-// Post registration
+// регистрация
 userController.doRegister = function(req, res) {
   User.register(new User({ username : req.body.username, name: req.body.name }), req.body.password, function(err, user) {
     if (err) {
@@ -42,12 +41,11 @@ userController.doRegister = function(req, res) {
   });
 };
 
-// Go to login page
 userController.login = function(req, res) {
   res.render('login');
 };
 
-// Post login
+// логін
 userController.doLogin = function(req, res) {
   passport.authenticate('local')(req, res, function () {
     res.redirect('/');

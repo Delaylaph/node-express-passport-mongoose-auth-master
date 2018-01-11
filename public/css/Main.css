@@ -3,17 +3,20 @@ body {
     font-weight: 400;
     font-size: 20px;
     line-height: 1.7;
+    background: #1a112d !important;
+    height: 1250px;
 
 }
 a {
     text-decoration: none;
-    color: lightseagreen;
+    color: dodgerblue;
 }
 a:focus {
     text-decoration: underline;
 }
 a:
 .nav {
+
     float: right;
     height: 40px;
     padding: 0;
@@ -31,25 +34,121 @@ a:
 
 }
 .container {
-    background-color: #FEDCC8;
-    width: 90%;
+
+    width: 100% !important;
     margin: auto;
+    position: fixed;
+
 }
 .logo {
     display: inline-block;
-    color: darkturquoise;
+    color: dodgerblue;
     position: fixed;
 
 }
 .banner {
     background-color: #FEDCC8;
+    height: 310px;
+
 }
-.holiday {
-    position: fixed;
+
+
+.intro-direction {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+}
+.mouse-icon {
+    border: 2px solid #fff;
+    height: 40px;
+    width: 24px;
+    display: block;
+    z-index: 10;
+    opacity: 0.7;
+    background-color: rgba(255,255,255,.5);
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+}
+.mouse-icon .wheel {
+    -webkit-animation-name: mouse-anim-drop;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-play-state: running;
+    -webkit-animation-name: mouse-anim-drop;
+    animation-name: mouse-anim-drop;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+.mouse-icon .wheel {
+    position: relative;
+    width: 2px;
+    height: 6px;
+    top: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+@-webkit-keyframes mouse-anim-drop {
+    0% {
+        top: 5px;
+        opacity: 0;
+    }
+    30% {
+        top: 10px;
+        opacity: 1;
+    }
+    100% {
+        top: 25px;
+        opacity: 0;
+    }
+}
+@keyframes mouse-anim-drop {
+    0% {
+        top: 5px;
+        opacity: 0;
+    }
+    30% {
+        top: 10px;
+        opacity: 1;
+    }
+    100% {
+        top: 25px;
+        opacity: 0;
+    }
+}
+.icon-svg {
+    max-height: 80px;
+}
+
+.mouse-icon .wheel{
+    background-color: #ff4530 !important;
+}
+
+.stat {
+    color: paleturquoise;
     overflow: hidden;
     font-size: 16px;
+    position: absolute;
+    margin-left: 35%;
+
 }
-.holiday dt, .holiday dd {
+dl {
+    width: 530px;
+}
+.stat dt, .stat dd {
     height: 2.5em;
     line-height: 2.5em;
     padding: 0 0.625em 0 0.875em;
@@ -71,3 +170,12 @@ dd {
     border: 1px solid #BECFC7;
     border-left: none;
 }
+
+#welcome {
+    margin-top: 400px;
+    color: paleturquoise;
+}
+.pad {
+    padding-left: 45%;
+}
+
